@@ -1,18 +1,9 @@
-import commander from "commander";
-let version: [string] = [
-  "--version",
-  "-v"
-];
-
-let help: [string] = [
-  "--help",
-  "help",
-  "-h"
-];
+import commands = require("commander");
 
 
-
-process.argv.forEach((val, index) => {
-  console.log(`${index}: ${val}`);
-  
-});
+commands
+  .version('0.0.1')
+  .option('-h, --help', 'Show help.')
+  .command('compile [file]', 'compile csss file.')
+  .parse(process.argv)
+;

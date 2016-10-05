@@ -1,13 +1,7 @@
 "use strict";
-var version = [
-    "--version",
-    "-v"
-];
-var help = [
-    "--help",
-    "help",
-    "-h"
-];
-process.argv.forEach(function (val, index) {
-    console.log(index + ": " + val);
-});
+var commands = require("commander");
+commands
+    .version('0.0.1')
+    .option('-h, --help', 'Show help.')
+    .command('compile [file]', 'compile csss file.')
+    .parse(process.argv);
