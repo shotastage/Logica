@@ -8,7 +8,7 @@
 
 
 // Like mixin with type check
-@def custom-normalize() -> string {
+@def custom-normalize() -> CSSObject {
 	normalizr.style()
 	* {
 		margin: 0
@@ -17,12 +17,12 @@
 
 
 @class Mixins {
-	@def size(%vetical: pixel?, %horizontal: pixel?) -> Void {
+	@def size(%vetical: pixel?, %horizontal: pixel?) {
 		width: %vertical,
 		height: %horizontal
 	}
 
-	@def makeButton(%width: pixel, %height: pixel, %bg: color) -> @content {
+	@def makeButton(%width: pixel, %height: pixel, %bg: color) -> CSSObject {
 		display: inline-block,
 		height: %height,
 		width: %width,
@@ -39,7 +39,7 @@
 
 
 
-Main.custom-normalize()
+main.custom-normalize()
 
 .container {
 	display: inline-bloxk,
