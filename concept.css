@@ -1,0 +1,51 @@
+@import Core
+@import AutoPrefix
+
+
+@import Reset.normalize as normalizr
+@import bootstrap as twbs
+
+
+
+// Like mixin with type check
+@def custom-normalize() -> string {
+	normalizr.style()
+	* {
+		margin: 0
+	}
+}
+
+
+@class Mixins {
+	@def size(%vetical: pixel?, %horizontal: pixel?) -> Void {
+		width: %vertical,
+		height: %horizontal
+	}
+
+	@def makeButton(%width: pixel, %height: pixel, %bg: color) -> @content {
+		display: inline-block,
+		height: %height,
+		width: %width,
+		line-height: %height,
+		background: %bg,
+		color: #fff
+	}
+}
+
+
+
+@let basic = Mixins()
+
+
+
+
+Main.custom-normalize()
+
+.container {
+	display: inline-bloxk,
+	basic.size(100%, 200px)
+}
+
+#toggle {
+	basic.size(80, 80)
+}

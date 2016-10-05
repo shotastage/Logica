@@ -1,0 +1,21 @@
+{
+  "name": "csss",
+  "version": "0.0.1",
+  "description": "A new script language written in TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Web",
+    "CSS",
+    "Stylesheet"
+  ],
+  "author": "Shota Shimazu",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^6.0.42",
+    "commander": "^2.9.0",
+    "tsd": "^0.6.5"
+  }
+}
