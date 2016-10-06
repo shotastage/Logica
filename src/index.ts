@@ -16,7 +16,9 @@ commands
   .command('installed', 'show all installed plugins.')
   .command('remove [plugin]', 'remove plugin.')
   .command('watch', 'watch files.')
+  .command('build', 'build CSSS package.')
   .command('dammy', 'test run.')
   .option('-h, --help', 'show help.')
+  .option('-g, --global--install', 'install plugin globally.')
   .parse(process.argv)
 ;
