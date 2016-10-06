@@ -1,36 +1,16 @@
-# CSSS
+# CSS + Script
+CSSS is the new script language that enables you to code stylesheet more efficiently and more logically.
 
-# Syntax
+# Features
+- Type Safe
+- Light speed compile
+- Expandable  
 
-### Import
-```
-@import Core
-```
+# Contributors 
 
-```
-@import Reset as rst
-```
+- Shota Shimazu
 
-### Function
-```
-@def size()
-```
-
-# Type Safe
-
-### Basic Types
-| Type Name |     |
-|:---------:|:---:|
-| Int(64bit)| int |
-| Double    | double|
-| Boolean   | bool |
-| String    | string |
+# License
+This program is distributed under the Apache v2, see [LICENSE](LICENSE) for detail.
 
 
-### Extended Types
-| Type Name |    |
-|:---------:|:----:|
-| Pixel     | pixel |
-| Color     | color |
-| Url       | url|
-| ||

@@ -3,7 +3,7 @@
 
 
 @import Reset.normalize as normalizr
-@import bootstrap as twbs
+@import Bootstrap as twbs
 
 
 
@@ -49,3 +49,27 @@ main.custom-normalize()
 #toggle {
 	basic.size(80, 80)
 }
+
+
+
+// Functions
+// -----------------------------------------------------------------------------
+@def size(width: pixel?, height: pixel?) {
+	width: width
+	height: height
+}
+
+// Explicitly define this function.
+@def CSSObject -> size(width: pixel?, height: pixel?) -> CSSObject {
+	width: width
+	height: height
+}
+
+
+// Variables and Constants
+// -----------------------------------------------------------------------------
+@let default-width = 230px
+@let default-color = #fff
+
+@let default-width: pixel = 230px
+@let default-color: color = #fff
