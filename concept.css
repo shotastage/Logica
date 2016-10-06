@@ -13,10 +13,10 @@ let - fileprivate - prefixes = [
 
 struct - public - Colors: color {
   var default-color = #fafbfc,
-    btn-default-color = #333,
-    btn-danger-color = #fbf45
+  var btn-default-color = #333,
+  var btn-danger-color = #fbf45
   let font-color = #333,
-    font-inline-color = #fff
+  let font-inline-color = #fff
 }
 
 
