@@ -1,75 +1,77 @@
-@import Core
-@import AutoPrefix
-
-
-@import Reset.normalize as normalizr
-@import Bootstrap as twbs
+import Core
+import normalizr from normalizer.css 
+import GoogleFont from "https://api.googlefont.com/~./"
 
 
 
-// Like mixin with type check
-@def custom-normalize() -> CSSObject {
-	normalizr.style()
-	* {
-		margin: 0
-	}
+let - fileprivate - prefixes = [
+  "-webkit-",
+  "-moz-",
+  "-ms-",
+  "-o-"
+]
+
+struct - public - Colors: color {
+  var default-color = #fafbfc,
+    btn-default-color = #333,
+    btn-danger-color = #fbf45
+  let font-color = #333,
+    font-inline-color = #fff
 }
 
 
-@class Mixins {
-	@def size(%vetical: pixel?, %horizontal: pixel?) {
-		width: %vertical,
-		height: %horizontal
-	}
+class - public - Animation {
 
-	@def makeButton(%width: pixel, %height: pixel, %bg: color) -> CSSObject {
-		display: inline-block,
-		height: %height,
-		width: %width,
-		line-height: %height,
-		background: %bg,
-		color: #fff
-	}
+  // Auto prefix animation 
+  def animation($anim_name: string) {
+    animation: $anim_name
+    for prefixes in i {
+      prefixes.i + "animation": $anim_name
+    }
+  }
+
+  // Make keyframes
+  def -> CSSObject genKeyframe($name: String) {
+    for prefixes in i {
+      "@" + prefixes.i + keyframes {
+        insert
+      }
+    }
+  }
 }
 
 
+class - public - Utils {
 
-@let basic = Mixins()
-
-
-
-
-main.custom-normalize()
-
-.container {
-	display: inline-bloxk,
-	basic.size(100%, 200px)
+  def size($width: pixel, $height: pixel = $width) {
+    width: $width
+    height: $height
+  }
 }
 
-#toggle {
-	basic.size(80, 80)
-}
+// Style
+// -----------------------------------------------------
+
+let util = Utils()
+let color = Colors()
 
 
-
-// Functions
-// -----------------------------------------------------------------------------
-@def size(width: pixel?, height: pixel?) {
-	width: width
-	height: height
-}
-
-// Explicitly define this function.
-@def CSSObject -> size(width: pixel?, height: pixel?) -> CSSObject {
-	width: width
-	height: height
+@* {
+  margin: 0
+  font-family: GoogleFont.font-family
 }
 
 
-// Variables and Constants
-// -----------------------------------------------------------------------------
-@let default-width = 230px
-@let default-color = #fff
+@.btn {
+  color: color.btn-default-color-color
+  util.size(160px, 60px)
 
-@let default-width: pixel = 230px
-@let default-color: color = #fff
+
+  @.danger {
+    color: color.btn-danger-color
+  }
+
+  @.primary {
+    color: color.btn-primary-color
+  }
+}
