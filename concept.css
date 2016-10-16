@@ -1,6 +1,6 @@
 import Core
 import normalizr from normalizer.css 
-import GoogleFont from "https://api.googlefont.com/~./"
+import GoogleFont from "https://fonts.googleapis.com/css?family=Open+Sans"
 
 
 
@@ -14,7 +14,7 @@ let - fileprivate - prefixes = [
 struct - public - Colors: color {
   var default-color = #fafbfc,
   var btn-default-color = #333,
-  var btn-danger-color = #fbf45
+  var btn-danger-color = #fbf45,
   let font-color = #333,
   let font-inline-color = #fff
 }
