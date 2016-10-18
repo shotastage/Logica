@@ -2,16 +2,16 @@
 
 ### Import
 ```
-@import Core
+import Core
 ```
 
 ```
-@import Reset as rst
+import Reset as rst
 ```
 
 ### Function
 ```
-@def size()
+def size()
 ```
 
 # Type Safe
@@ -31,4 +31,3 @@
 | Pixel     | pixel |
 | Color     | color |
 | Url       | url|
-| ||
