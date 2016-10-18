@@ -1,0 +1,7 @@
+var default-color = #fafbfc
+var dafault-font-size: pixle = 30
+
+@.btn {
+  color: default-color
+  font-size: default-font-size
+}
