@@ -1,6 +1,6 @@
 module CSSScriptAst {
 
-    export interface langugaeDefinition {
+    export interface LanguageDefinition {
         reservedNames: [
             "def", "return",                // For function
             "if", "elif", "else",           // For if
@@ -16,8 +16,7 @@ module CSSScriptAst {
         ];
 
         AccessModifiers: [
-            "public", 
-            "private", "fileprivate"
+            "public", "private", "fileprivate"
         ];
 
         Operetors: [
@@ -33,16 +32,15 @@ module CSSScriptAst {
         ];
 
         Symbols: [
+            ":",                // Define type
+            "->", "<-",         // For define return types
             "!", "?",           // Optional Types
             "&", "|",           // If syntax
             "@"                 // CSS Object
         ];
 
-        Letters: [
-            "0123456789",                       // Numbers
-            "abcdefghijklmnopqrstuvwxyz",       // Alphabets
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",       // Alphabets
-            "!#$%&(-=^~¥|@`[]{};+:*,<.>/?_"     // Symbols
+        SuperFuncs: [
+            "exec"
         ];
     }
 }
