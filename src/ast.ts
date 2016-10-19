@@ -1,7 +1,7 @@
 module CSSScriptAst {
 
     export interface LanguageDefinition {
-        reservedNames: [
+        ReservedNames: [
             "def", "return",                // For function
             "if", "elif", "else",           // For if
             "switch", "case",               // For switch
@@ -12,7 +12,8 @@ module CSSScriptAst {
             "class", "struct", "enum",      // For object oriented programming
             "let", "var",                   // For varibales and constnats
             "import", "as", "from",         // For import styles or modules
-            "export", "module", "package"   // For export styles or modules
+            "export", "module", "package",  // For export styles or modules
+            "declare", "insert", "list"     // Temporary words 
         ];
 
         AccessModifiers: [
@@ -40,7 +41,18 @@ module CSSScriptAst {
         ];
 
         SuperFuncs: [
-            "exec"
+            "exec", "boot", "launch"
         ];
+    }
+
+
+    export interface ASTObject {
+        ObjectType: string;
+        Keyword: string;
+        
+    }
+
+    function createObjectModel(): void{
+        
     }
 }
