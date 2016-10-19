@@ -1,0 +1,9 @@
+def size($width: pixel, $height: pixel = $width) {
+    width: $width
+    height: $height
+}
+
+
+@.btn {
+  size(160px, 60px)
+}

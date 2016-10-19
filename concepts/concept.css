@@ -4,14 +4,14 @@ import GoogleFont from "https://fonts.googleapis.com/css?family=Open+Sans"
 
 
 
-let - fileprivate - prefixes = [
+fileprivate let prefixes = [
   "-webkit-",
   "-moz-",
   "-ms-",
   "-o-"
 ]
 
-struct - public - Colors: color {
+public struct Colors: color {
   var default-color = #fafbfc,
   var btn-default-color = #333,
   var btn-danger-color = #fbf45,
@@ -20,7 +20,7 @@ struct - public - Colors: color {
 }
 
 
-class - public - Animation {
+public class Animation {
 
   // Auto prefix animation 
   def animation($anim_name: string) {
@@ -41,7 +41,7 @@ class - public - Animation {
 }
 
 
-class - public - Utils {
+public class Utils {
 
   def size($width: pixel, $height: pixel = $width) {
     width: $width
