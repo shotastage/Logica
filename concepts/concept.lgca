@@ -1,7 +1,21 @@
+// Logica concept 201610202254
+
 import Core
 import normalizer.css 
 import fontstyle from "https://fonts.googleapis.com/css?family=Open+Sans"
 
+
+
+
+// Variables 
+// --------------------------------
+struct BasicColors: color {
+  var default-color      = #fafbfc,
+  var btn-default-color  = #333,
+  var btn-danger-color   = #fbf45,
+  let font-color         = #333,
+  let font-inline-color  = #fff
+}
 
 
 fileprivate let prefixes = [
@@ -11,22 +25,17 @@ fileprivate let prefixes = [
   "-o-"
 ]
 
-public struct Colors: color {
-  var default-color      = #fafbfc,
-  var btn-default-color  = #333,
-  var btn-danger-color   = #fbf45,
-  let font-color         = #333,
-  let font-inline-color  = #fff
-}
 
 
 public class Animation {
 
   // Auto prefix animation 
-  def animation($anim_name: string) {
-    animation: $anim_name
+  def animation(anim_name: string) {
+    @{
+      animation: anim_name
+    }
     for prefixes in i {
-      prefixes.i + "animation": $anim_name
+      prefixes.i + @{ animation: anim_name }
     }
   }
 
@@ -43,10 +52,12 @@ public class Animation {
 
 public class Utils {
 
-  def size($width: pixel?, $height: pixel? = $width) {
-    width: $width
-    height: $height
+  def size(width: pixel?, height: pixel? = width) {
+    width: width
+    height: height
   }
+
+  def prefix()
 }
 
 
