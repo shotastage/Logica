@@ -6,18 +6,16 @@ module Logica {
             "if", "elif", "else",           // For if
             "switch", "case",               // For switch
             "for", "in",                    // For for
-            "while", "do",                  // For while
             "try", "catch",                 // For error handling
-            "when", "break",                // For when
-            "class", "struct", "enum",      // For object oriented programming
+            "class", "struct",              // For object oriented programming
             "let", "var",                   // For varibales and constnats (Level 0)
             "import", "as", "from",         // For import styles or modules
             "export", "module",             // For export styles or modules
-            "typealias", "declaretype",     // For definining original type
+            "typealias",                    // For definining original type
 
             // ---------------------------------------------------------------//
             "package",                                                        //
-            "declare", "insert", "list",                                      //
+            "insert", "list",                                                 //
             "interface"                                                       //
             // ---------------------------------------------------------------//
         ];
