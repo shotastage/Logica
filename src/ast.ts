@@ -1,4 +1,4 @@
-module CSSScriptAst {
+module Logica {
 
     export interface LanguageDefinition {
         ReservedNames: [
@@ -13,7 +13,8 @@ module CSSScriptAst {
             "let", "var",                   // For varibales and constnats
             "import", "as", "from",         // For import styles or modules
             "export", "module", "package",  // For export styles or modules
-            "declare", "insert", "list"     // Temporary words 
+            "declare", "insert", "list",    // Temporary words
+            "interface"
         ];
 
         AccessModifiers: [
