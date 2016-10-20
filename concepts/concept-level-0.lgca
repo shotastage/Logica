@@ -2,7 +2,7 @@
 
 // Inline comment
 
-var default-color = #fafbfc
+var default-color            = #fafbfc
 var dafault-font-size: pixle = 30
 
 @.btn {
