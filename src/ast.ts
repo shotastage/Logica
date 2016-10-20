@@ -49,7 +49,9 @@ module CSSScriptAst {
     export interface ASTObject {
         ObjectType: string;
         Keyword: string;
-        
+        Identifier: string;
+        Value: any;
+        Model: any;
     }
 
     function createObjectModel(): void{

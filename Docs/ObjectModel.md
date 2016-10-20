@@ -9,11 +9,26 @@ var test = 123
 ```
 
 ```:json
-{
-    "ObjectType": "variables",
-    "Keyword": "var",
-    "Identifier": "test",
-    "Value": "123",
-    "Type": "integer"
-}
+[
+    {
+        "type": "Keyword",
+        "value": "var"
+    },
+    {
+        "type": "Identifier",
+        "value": "test"
+    },
+    {
+        "type": "Punctuator",
+        "value": "="
+    },
+    {
+        "type": "Numeric",
+        "value": "123"
+    },
+    {
+        "type": "Punctuator",
+        "value": ";"
+    }
+]
 ```
