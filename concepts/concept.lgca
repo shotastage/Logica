@@ -28,25 +28,27 @@ fileprivate let prefixes = [
 
 
 public class Animation {
-
+  
   // Auto prefix animation 
-  def animation(anim_name: string) {
-    @{
-      animation: anim_name
-    }
-    for prefixes in i {
-      prefixes.i + @{ animation: anim_name }
-    }
-  }
+    def animation(anim_name: string) {
+      @{
+        animation: $anim_name
+      }
 
-  // Make keyframes
-  def -> CSSObject genKeyframe($name: String) {
-    for prefixes in i {
-      "@" + prefixes.i + keyframes {
-        insert
+      for i in 0..<prefixes.length {
+        prefixes.i + @{ animation: $anim_name }
       }
     }
-  }
+
+  // Make keyframes
+    def -> CSSObject genKeyframe($name: String) {
+      for i in 0..<prefixes.length {
+        @{
+          prefixes[$i] + keyframes {
+          insert
+        }
+      }
+    }
 }
 
 
