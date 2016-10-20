@@ -1,6 +1,6 @@
 import Core
-import normalizr from normalizer.css 
-import GoogleFont from "https://fonts.googleapis.com/css?family=Open+Sans"
+import normalizer.css 
+import fontstyle from "https://fonts.googleapis.com/css?family=Open+Sans"
 
 
 
@@ -43,19 +43,27 @@ public class Animation {
 
 public class Utils {
 
-  def size($width: pixel, $height: pixel = $width) {
+  def size($width: pixel?, $height: pixel? = $width) {
     width: $width
     height: $height
   }
 }
 
+
+
+
+
 // Style
 // -----------------------------------------------------
 
+
+// Create  instances
 let util = Utils()
 let color = Colors()
 
 
+
+// CSS Objects (instance)
 @* {
   margin: 0
   font-family: GoogleFont.font-family

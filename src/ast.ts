@@ -2,7 +2,7 @@ module Logica {
 
     export interface LanguageDefinition {
         ReservedNames: [
-            "def", "return",                // For function
+            "def", "return",                // For function (Level 1)
             "if", "elif", "else",           // For if
             "switch", "case",               // For switch
             "for", "in",                    // For for
@@ -10,11 +10,16 @@ module Logica {
             "try", "catch",                 // For error handling
             "when", "break",                // For when
             "class", "struct", "enum",      // For object oriented programming
-            "let", "var",                   // For varibales and constnats
+            "let", "var",                   // For varibales and constnats (Level 0)
             "import", "as", "from",         // For import styles or modules
-            "export", "module", "package",  // For export styles or modules
-            "declare", "insert", "list",    // Temporary words
-            "interface"
+            "export", "module",             // For export styles or modules
+            "typealias", "declaretype",     // For definining original type
+
+            // ---------------------------------------------------------------//
+            "package",                                                        //
+            "declare", "insert", "list",                                      //
+            "interface"                                                       //
+            // ---------------------------------------------------------------//
         ];
 
         AccessModifiers: [
