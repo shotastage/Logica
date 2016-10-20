@@ -6,6 +6,11 @@
 
 Logica is the new script language that enables you to code stylesheet more efficiently and more logically.
 
+
+# Concept
+Latest concept is [here](concepts/concept.lgca). 
+
+
 # Features
 - Type Safe
 - Light speed compile
