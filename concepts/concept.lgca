@@ -35,14 +35,14 @@ public class Animation {
         animation: $anim_name
       }
 
-      for i in 0..<prefixes.length {
+      for i in 0..<prefixes.count {
         prefixes.i + @{ animation: $anim_name }
       }
     }
 
   // Make keyframes
     def -> CSSObject genKeyframe($name: String) {
-      for i in 0..<prefixes.length {
+      for i in 0..<prefixes.count {
         @{
           prefixes[$i] + keyframes {
           insert
