@@ -31,7 +31,7 @@ module Logica {
         ];
 
         Types: [
-            "int", "double", "number", "bool", "string", // Basic Types
+            "int", "number", "bool", "string",           // Basic Types
             "pixle", "color", "selector", "url"          // CSSScript Types
         ];
 
