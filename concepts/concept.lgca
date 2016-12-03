@@ -1,5 +1,7 @@
 // Logica concept 201610202254
 
+declare type stylesheet
+
 import Core
 import normalizer.css 
 import fontstyle from "https://fonts.googleapis.com/css?family=Open+Sans"

@@ -1,0 +1,14 @@
+// Logica concept 201612041111
+
+declare type html
+
+@ head {
+  +meta(charser="utf-8")
+  +title This is title.
+}
+
+@ body {
+  +div(class="container") {
+    h2 Heading
+  }
+}
