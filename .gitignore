@@ -7,3 +7,6 @@ npm-debug.log
 *.gz
 *.xz
 *.tar
+
+# Editor Setting
+.vscode/
